@@ -12,7 +12,7 @@ def attempt(attempts):
         return(str(attempts)+' попыток.')
     
 print('Привет, попробуй угадать число от 1 до 100. Введи свое имя, чтобы начать.')
-gamer = input()
+gamer = input('Как твое имя? ')
 while(oneMore == 'д' or oneMore == 'Д'):
     hiddenNumber = rand(1, 100)
     print(gamer+' у тебя 6 попыток. Удачи!')
