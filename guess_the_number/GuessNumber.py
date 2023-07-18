@@ -3,14 +3,6 @@ from random import randint as rand
 attempts = 0
 oneMore = 'д'
 
-def attempt(attempts):
-    if attempts == 1:
-       return(str(attempts)+' попытку.') 
-    elif attempts <=4:
-        return(str(attempts)+' попытки.')
-    else:
-        return(str(attempts)+' попыток.')
-
 print('Привет, попробуй угадать число от 1 до 100. Введи свое имя, чтобы начать.')
 gamer = input('Как твое имя? ')
 while(oneMore.upper() == 'ДА' or oneMore.upper() == 'Д'):
@@ -25,8 +17,8 @@ while(oneMore.upper() == 'ДА' or oneMore.upper() == 'Д'):
         if guess == hiddenNumber:
             break
     if guess == hiddenNumber:
-        print(gamer+' поздравляю, ты капитальный красавчик!!! Угадал за '
-              +str(attempt(attempts+1)))
+        print(gamer+' поздравляю, ты капитальный красавчик!!! Угадал с '
+              +str(attempts)+' попытки.')
     if guess != hiddenNumber:
         print('Видимо сегодня не твой день '+gamer+'. Было загадано число '
               +str(hiddenNumber))
